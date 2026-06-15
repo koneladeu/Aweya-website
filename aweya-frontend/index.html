@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aweya – Sooo Aweya | Lingerie & Homewear</title>
+
+    <!-- Lien vers le fichier de style global -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Police élégante Google Fonts (Playfair Display pour les titres, Montserrat pour le texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header"></header>
+
+    <main>
+        <!-- SECTION 1 : Accueil / Bannière Héro -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="hero-subtitle">SOOO AWEYA</span>
+                <h1>Révélez votre douceur et votre confiance</h1>
+                <p>Une collection exclusive de lingerie et homewear conçue pour sublimer le bien-être et la féminité au
+                    quotidien.</p>
+                <a href="boutique.html" class="btn-primary">Acheter maintenant</a>
+            </div>
+            <div class="hero-image">
+                <!-- Image de couverture de la marque -->
+                <img src="assets/images/hero-cover.jpg" alt="Collection Lingerie Aweya">
+            </div>
+        </section>
+
+        <!-- SECTION 2 : Produits mis en avant (Dynamique via Strapi bientôt) -->
+        <section class="featured-section">
+            <div class="section-title">
+                <h2>Nos Coups de Cœur</h2>
+                <p>Découvrez les pièces indispensables de notre collection</p>
+            </div>
+
+            <!-- C'est ici que JavaScript viendra injecter les cartes produits de Strapi -->
+            <div class="products-grid" id="featured-products">
+                <!-- Exemple de carte produit statique pour le moment -->
+                <div class="product-card">
+                    <div class="product-badge">Nouveauté</div>
+                    <img src="assets/images/product-placeholder.jpg" alt="Ensemble Lingerie Satin">
+                    <div class="product-info">
+                        <h3>Ensemble Lingerie Satin Rosé</h3>
+                        <p class="product-price">25 000 FCFA</p>
+                        <a href="#" class="btn-secondary">Voir le produit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 : Avis Clientes -->
+        <section class="reviews-section">
+            <div class="section-title">
+                <h2>Ce qu'elles en disent</h2>
+                <p>Votre confiance est notre plus belle réussite</p>
+            </div>
+            <!-- C'est ici que JavaScript injectera les avis de Strapi -->
+            <div class="reviews-container" id="reviews-list">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Le confort de l'ensemble homewear est incroyable. Le tissu est d'une douceur
+                        rare, je me sens tellement bien dedans !"</p>
+                    <span class="review-author">— Aminata K.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer"></footer>
+
+    <!-- ÉLÉMENT : Chat WhatsApp Intégré (Bouton flottant) -->
+    <!-- Remplacer le numéro après /225 par le vrai numéro WhatsApp Business de ton amie -->
+    <a href="https://wa.me/2250000000000?text=Bonjour%20Aweya,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20produits."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Discuter sur WhatsApp">
+    </a>
+
+    <!-- Scripts JavaScript -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

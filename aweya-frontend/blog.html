@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Conseils | Aweya – Sooo Aweya</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        .blog-container {
+            padding: 4rem 4%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        /* Grille d'articles */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .blog-card {
+            background: var(--blanc);
+            border-radius: var(--arrondi-doux);
+            overflow: hidden;
+            transition: var(--transition-douce);
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background-color: var(--gris-tres-clair);
+        }
+        .blog-content {
+            padding: 1.5rem 0;
+        }
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--texte-secondaire);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .blog-title {
+            font-family: var(--police-titre);
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .blog-excerpt {
+            font-weight: 300;
+            color: var(--texte-secondaire);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Coupe le texte proprement après 3 lignes */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .blog-link {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--texte-sombre);
+            padding-bottom: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Injection automatique du Header via main.js -->
+    <header class="main-header"></header>
+
+    <main class="blog-container">
+        <div class="section-title">
+            <h2>Le Journal d'Aweya</h2>
+            <p>Conseils, tendances lingerie et secrets de bien-être au féminin</p>
+        </div>
+
+        <!-- Zone d'injection des articles -->
+        <div class="blog-grid" id="blog-articles-grid">
+            <div style="text-align: center; grid-column: 1/-1; padding: 3rem; color: var(--texte-secondaire);">
+                Chargement des articles de conseils...
+            </div>
+        </div>
+    </main>
+
+    <!-- Injection automatique du Footer via main.js -->
+    <footer class="main-footer"></footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Nouveau script dédié pour la logique du blog -->
+    <script src="assets/js/blog.js"></script>
+</body>
+</html>
