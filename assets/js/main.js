@@ -20,6 +20,7 @@ async function includeHeaderAndFooter() {
                 headerElement.innerHTML = await response.text();
                 // Activer le lien de la page courante
                 highlightCurrentPage();
+                if (typeof updateCartCounters === 'function') updateCartCounters();
             }
         } catch (error) {
             console.error("Erreur lors du chargement du header :", error);

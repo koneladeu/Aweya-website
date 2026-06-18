@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Panier | Aweya – Sooo Aweya</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        .cart-container {
+            padding: 4rem 4%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        .cart-table th {
+            text-align: left;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--rose-poudre);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--texte-secondaire);
+        }
+        .cart-item {
+            border-bottom: 1px solid var(--gris-tres-clair);
+        }
+        .cart-item td {
+            padding: 1.5rem 0;
+            vertical-align: middle;
+        }
+        .cart-product-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .cart-product-info img {
+            width: 70px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: var(--arrondi-doux);
+            background-color: var(--gris-tres-clair);
+        }
+        .cart-product-details h3 {
+            font-family: var(--police-titre);
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+        .cart-product-details p {
+            font-size: 0.85rem;
+            color: var(--texte-secondaire);
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .quantity-btn {
+            background: none;
+            border: 1px solid var(--rose-poudre);
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-douce);
+        }
+        .quantity-btn:hover {
+            background-color: var(--rose-poudre);
+        }
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #c0392b;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+        .cart-summary {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1.5rem;
+        }
+        .total-box {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            .cart-table th:nth-child(2), .cart-table td:nth-child(2) { display: none; } /* Cache le prix unitaire sur petit mobile */
+            .cart-product-info { gap: 0.75rem; }
+            .cart-product-info img { width: 55px; height: 75px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header"></header>
+
+    <main class="cart-container">
+        <div class="section-title">
+            <h2>Votre Sélection</h2>
+            <p>Finalisez votre panier avant d'envoyer votre commande</p>
+        </div>
+
+        <div id="cart-content-wrapper">
+            <!-- Injecté dynamiquement par le JavaScript -->
+        </div>
+    </main>
+
+    <footer class="main-footer"></footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/panier-view.js"></script>
+</body>
+</html>

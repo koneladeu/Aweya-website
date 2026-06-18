@@ -421,3 +421,111 @@ a{
         height: 26px;
     }
 }
+
+
+/* ==========================================================================
+   VERSION MOBILE & TABLETTE (RESPONSIVE DESIGN)
+   ========================================================================== */
+
+   @media (max-width: 768px) {
+    /* 1. Global & Typographie */
+    body {
+        font-size: 14px;
+    }
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    /* 2. Header & Menu de Navigation Mobile */
+    .main-header {
+        padding: 1rem 4%;
+        position: relative;
+    }
+    /* Si tu as une liste de liens (nav ul), on la passe en colonne ou on l'adapte */
+    .main-header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        padding: 0;
+    }
+    .main-header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    /* 3. Grilles de la Boutique et du Blog */
+    .products-grid, .blog-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+        gap: 1.2rem !important;
+        padding: 1rem 0;
+    }
+
+    /* Ajustement des cartes produits sur mobile pour gagner de la place */
+    .product-card img {
+        height: 220px;
+    }
+    .product-title {
+        font-size: 0.95rem;
+    }
+    .product-price {
+        font-size: 0.9rem;
+    }
+
+    /* 4. Page Détail Produit (Passage sur une seule colonne) */
+    .product-detail-container { /* Adapte selon la classe de ton conteneur principal */
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 4%;
+    }
+    .detail-gallery img {
+        height: 380px; /* Hauteur maximale sur mobile pour garder le produit visible */
+        width: 100%;
+        object-fit: cover;
+    }
+    .detail-title {
+        font-size: 1.8rem;
+    }
+    .detail-actions {
+        position: sticky;
+        bottom: 0;
+        background: var(--blanc);
+        padding: 1rem 0;
+        box-shadow: 0 -10px 20px rgba(0,0,0,0.05);
+        z-index: 100;
+    }
+
+    /* 5. Page Panier sur Mobile */
+    .cart-container {
+        padding: 2rem 4%;
+    }
+    .cart-table th:nth-child(2), 
+    .cart-table td:nth-child(2) { 
+        display: none; /* Cache la colonne "Prix Unitaire" pour éviter que le tableau déborde */
+    }
+    .cart-product-info {
+        gap: 0.75rem;
+    }
+    .cart-product-info img {
+        width: 55px;
+        height: 75px;
+    }
+    .cart-summary {
+        align-items: stretch; /* Les boutons prennent toute la largeur sur mobile */
+        width: 100%;
+    }
+    .cart-summary .btn-primary {
+        max-width: 100%;
+    }
+}
+
+/* Petits écrans (Smartphones compacts < 480px) */
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr 1fr !important; /* Force un affichage propre sur 2 colonnes */
+        gap: 0.8rem !important;
+    }
+    .product-card img {
+        height: 180px;
+    }
+}
