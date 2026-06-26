@@ -83,7 +83,7 @@ function renderPanierView() {
     messageWhatsApp += `\n💵 *Total Général : ${sousTotalGlobal.toLocaleString('fr-FR')} FCFA*\n\n`;
     messageWhatsApp += `Pouvez-vous valider ma commande et me donner les modalités de livraison ? ✨`;
 
-    const whatsappLink = `https://wa.me/2250000000000?text=${encodeURIComponent(messageWhatsApp)}`;
+    const whatsappLink = `https://wa.me/+2250798627388?text=${encodeURIComponent(messageWhatsApp)}`;
 
     const summaryHTML = `
         <div class="cart-summary">
