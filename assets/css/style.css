@@ -222,6 +222,52 @@ a{
 }
 
 /* ==========================================================================
+   SECTION PROPRE À LA MISSION (À PROPOS)
+   ========================================================================== */
+   .mission-section {
+    background-color: var(--rose-poudre); /* Ou une couleur douce de ton choix */
+    padding: 5rem 4%;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.mission-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texte-secondaire);
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.mission-text {
+    font-family: var(--police-titre);
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--texte-sombre);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Ajustement pour le responsive mobile */
+@media (max-width: 768px) {
+    .mission-section {
+        padding: 3rem 6%;
+        margin: 2.5rem 0;
+    }
+    .mission-text {
+        font-size: 1.4rem;
+    }
+}
+
+/* ==========================================================================
    4. BOUTIQUE / GRILLE PRODUITS
    ========================================================================== */
 .featured-section{
